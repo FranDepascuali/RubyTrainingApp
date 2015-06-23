@@ -4,7 +4,7 @@ class ArticlesController < ApplicationController
   end
 
   def show
-    @article = Article.find(params[:id])
+    article
   end
 
   def new
@@ -12,13 +12,26 @@ class ArticlesController < ApplicationController
   end
 
   def create
-    return redirect_to @article if @article.save
+    return redirect_to article if article.save
     render 'new'
+  end
+
+  def edit
+    article
+  end
+
+  def update
+    return redirect_to article if article.update(article_params)
+    render 'edit'
   end
 
   private
 
   def article_params
     params.require(:article).permit(:title, :text)
+  end
+
+  def article
+    @article ||= Article.find(params[:id])
   end
 end
