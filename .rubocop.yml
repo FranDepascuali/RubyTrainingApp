@@ -1,0 +1,12 @@
+AllCops:
+ Exclude:
+   - features/support/env.rb
+   - spec/spec_helper.rb
+   - features/step_definitions/email_steps.rb
+   - spec/controllers/v1/users_controller_spec.rb
+
+Documentation:
+  Enabled: false
+
+LineLength:
+  Max: 99
