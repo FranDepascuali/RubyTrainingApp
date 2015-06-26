@@ -27,6 +27,13 @@ class ArticlesController < ApplicationController
 
   private
 
+  def destroy
+    article.destroy if article.present?
+    redirect_to articles_path
+  end
+
+  private
+
   def article_params
     params.require(:article).permit(:title, :text)
   end
