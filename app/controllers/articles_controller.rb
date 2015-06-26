@@ -12,6 +12,7 @@ class ArticlesController < ApplicationController
   end
 
   def create
+    @article = Article.new(article_params)
     return redirect_to article if article.save
     render 'new'
   end
@@ -24,8 +25,6 @@ class ArticlesController < ApplicationController
     return redirect_to article if article.update(article_params)
     render 'edit'
   end
-
-  private
 
   def destroy
     article.destroy if article.present?
