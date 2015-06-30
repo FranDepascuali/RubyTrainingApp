@@ -1,4 +1,5 @@
 class CommentsController < ApplicationController
+  http_basic_authenticate_with name: Rails.application.secrets.login.user, password: Rails.application.secrets.login.password, only: :destroy
   def create
     @comment = Comment.new(comment_params.merge(article: article))
     return redirect_to article_path(article) if @comment.save

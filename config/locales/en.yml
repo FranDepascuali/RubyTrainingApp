@@ -38,7 +38,7 @@ en:
     commenter: "Commenter"
     destroy: "Destroy Comment"
   popup:
-    confirmation: "Are you sureeee?"
+    confirmation: "Are you sure?"
   welcome:
     heading: "Hello, Rails!"
     blog: "My Blog"
