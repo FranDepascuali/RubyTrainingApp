@@ -5,6 +5,13 @@ class CommentsController < ApplicationController
     render 'articles/show'
   end
 
+  def destroy
+    @comment = article.comments.find(params[:id])
+    @comment.destroy
+    return redirect_to article_path(article) if @comment.destroyed?
+    render 'articles/show'
+  end
+
   private
 
   def article
