@@ -18,6 +18,27 @@
 #
 # To learn more, please read the Rails Internationalization guide
 # available at http://guides.rubyonrails.org/i18n.html.
-
 en:
-  hello: "Hello world"
+  articles:
+    destroy: "Delete"
+    edit: "Edit"
+    editing: "Editing Article"
+    show: "Show"
+    title: "Title"
+    text: "Text"
+    new: "New Article"
+    heading: "Listing Articles"
+    back: "Back"
+    update: "Update Article"
+    error: "prohibited this article from being saved"
+  comments:
+    title: "Comments"
+    new: "Add a comment"
+    comment: "Comment"
+    commenter: "Commenter"
+    destroy: "Destroy Comment"
+  popup:
+    confirmation: "Are you sureeee?"
+  welcome:
+    heading: "Hello, Rails!"
+    blog: "My Blog"

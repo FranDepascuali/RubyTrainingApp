@@ -2,11 +2,14 @@ hr
 p
   strong
     font color="red"
-      |Commenter:
+      = t('comments.commenter')
+      | :
       = comment.commenter
 p
-  strong Comment:
+  strong
+    = t('comments.comment')
+    | :
   = comment.body
 p
-= link_to 'Destroy Comment', [comment.article,comment], method: :delete,
-                                                        data: { confirm: 'Are you sure?' }
+= link_to t('comments.destroy'), [comment.article,comment], method: :delete,
+                                                        data: { confirm: t('popup.confirmation') }

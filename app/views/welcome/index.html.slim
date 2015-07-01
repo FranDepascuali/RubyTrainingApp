@@ -1,2 +1,3 @@
-h1 Hello, Rails!
-= link_to 'My Blog', controller: 'articles'
+h1
+  = t('welcome.heading')
+= link_to t('welcome.blog'), controller: 'articles'

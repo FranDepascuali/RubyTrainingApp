@@ -1,15 +1,20 @@
 p
-  strong Title:
+  strong
+    = t('articles.title')
+    | :
   = @article.title
 p
-  strong Text:
+  strong
+    = t('articles.text')
+    | :
   = @article.text
 h2
-  | Comments
+  = t('comments.title')
 - @article.comments.each do |comment|
   = render partial: "comments/comment", locals: { comment: comment }
-h2 Add a comment:
+h2
+  = t('comments.new')
 = render 'comments/form'
-= link_to 'Edit', edit_article_path(@article)
+= link_to t('articles.edit'), edit_article_path(@article)
 |  |
-= link_to 'Back', articles_path
+= link_to t('articles.back'), articles_path
