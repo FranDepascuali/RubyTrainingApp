@@ -6,8 +6,8 @@ head
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
 body
-    = yield
     p.notice
       = notice
     p.alert
       = alert
+    = yield
