@@ -27,10 +27,11 @@ en:
     title: "Title"
     text: "Text"
     new: "New Article"
-    heading: "Listing Articles"
+    heading: "Articles"
     back: "Back"
     update: "Update Article"
     error: "prohibited this article from being saved"
+    single: "Article"
   comments:
     title: "Comments"
     new: "Add a comment"

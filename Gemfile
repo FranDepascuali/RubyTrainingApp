@@ -15,8 +15,12 @@ gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
-# gem device
+# gem devise
 gem 'devise'
+
+# Twitter bootstrap
+gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
+
 
 gem 'i18n'
 # Use jquery as the JavaScript library

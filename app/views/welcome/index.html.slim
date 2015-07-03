@@ -1,3 +1,9 @@
-h1
-  = t('welcome.heading')
-= link_to t('welcome.blog'), controller: 'articles'
+.container
+  .row
+    .col-md-4
+    .col-md-4
+      .text-center
+        h1
+          = t('welcome.heading')
+        = link_to t('welcome.blog'), controller: 'articles'
+    .col-md-4

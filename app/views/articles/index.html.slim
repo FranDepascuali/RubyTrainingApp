@@ -1,24 +1,33 @@
-h1
-  = t('articles.heading')
-= link_to t('articles.new'), new_article_path
-table
-  tr
-    th
-      = t('articles.title')
-    th
-      = t('articles.text')
-    th {:colspan = 3}
-    - @articles.each do |article|
-      tr
-        td
-          = article.title
-        td
-          = article.text
-        td
-          = link_to t('articles.show'), article_path(article)
-        td
-          = link_to t('articles.edit'), edit_article_path(article)
-        td
-          = link_to t('articles.destroy'), article_path(article), method: :delete, data: { confirm: t('popup.confirmation') }
+.container
+  .row
+    .col-md-4
+    .col-md-4
+      .row
+        .text-center
+          h1
+            = t('articles.heading')
+      .row.top-buffer
+        table
+          tr
+            th
+              = t('articles.title')
+            th
+              = t('articles.text')
+            th {:colspan = 3}
+            - @articles.each do |article|
+              tr
+                td
+                  = article.title
+                td
+                  = article.text
+                td
+                  = link_to t('articles.show'), article_path(article)
+                td
+                  = link_to t('articles.edit'), edit_article_path(article)
+                td
+                  = link_to t('articles.destroy'), article_path(article), method: :delete, data: { confirm: t('popup.confirmation') }
+      .row.text-center.top-buffer
+         = link_to t('articles.new'), new_article_path
+    .col-md-4
 
 

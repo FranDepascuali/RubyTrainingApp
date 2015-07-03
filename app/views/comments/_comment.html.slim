@@ -1,15 +1,15 @@
 hr
-p
+p.text-center
   strong
     font color="red"
       = t('comments.commenter')
       | :
       = comment.commenter
-p
+p.text-center
   strong
     = t('comments.comment')
     | :
   = comment.body
-p
-= link_to t('comments.destroy'), [comment.article,comment], method: :delete,
+p.text-center
+  = link_to t('comments.destroy'), [comment.article,comment], method: :delete,
                                                         data: { confirm: t('popup.confirmation') }

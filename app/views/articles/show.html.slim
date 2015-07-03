@@ -1,20 +1,29 @@
-p
-  strong
-    = t('articles.title')
-    | :
-  = @article.title
-p
-  strong
-    = t('articles.text')
-    | :
-  = @article.text
-h2
-  = t('comments.title')
-- @article.comments.each do |comment|
-  = render partial: "comments/comment", locals: { comment: comment }
-h2
-  = t('comments.new')
-= render 'comments/form'
-= link_to t('articles.edit'), edit_article_path(@article)
-|  |
-= link_to t('articles.back'), articles_path
+.container
+  .row
+    .col-md-4.col-md-offset-4
+      .row.text-center
+        h1.text-center
+          = t('articles.single')
+      .row.text-center.top-buffer
+        p
+          strong
+            = t('articles.title')
+            | :
+          = @article.title
+        p
+          strong
+            = t('articles.text')
+            | :
+          = @article.text
+      .row
+        h3.text-center
+          = t('comments.title')
+        - @article.comments.each do |comment|
+          = render partial: "comments/comment", locals: { comment: comment }
+        h3.text-center
+          = t('comments.new')
+        = render 'comments/form'
+        .text-center
+          = link_to t('articles.back'), articles_path
+          |  |
+          = link_to t('articles.edit'), edit_article_path(@article)

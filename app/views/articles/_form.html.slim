@@ -8,13 +8,14 @@
       ul
         - @article.errors.full_messages.each do |msg|
           li= msg
-  p
-    = f.label :title, t('articles.title')
-    br
-      = f.text_field :title
-  p
-    = f.label :text, t('articles.text')
-    br
-      = f.text_area :text
-  p
+  .col-md-offset-3
+    p
+      = f.label :title, t('articles.title')
+      br
+        = f.text_field :title
+    p
+      = f.label :text, t('articles.text')
+      br
+        = f.text_area :text
+  p.text-center
     = f.submit t('articles.update')
